@@ -11,6 +11,10 @@ import java.io.InputStreamReader;
 import java.io.IOException;
 import java.io.PrintStream;
 
+/**
+ * @author Jeff Risberg (derived from Google ProtoBuf example - Java)
+ * @since 01/04/16
+ */
 class AddPerson {
     // This function fills in a Person message based on user input.
     static Person PromptForAddress(BufferedReader stdin,

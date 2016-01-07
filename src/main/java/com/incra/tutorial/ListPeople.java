@@ -2,13 +2,17 @@ package com.incra.tutorial;
 
 import com.incra.tutorial.AddressBookProtos.AddressBook;
 import com.incra.tutorial.AddressBookProtos.Person;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.PrintStream;
 
+import java.io.FileInputStream;
+
+/**
+ * @author Jeff Risberg (derived from Google ProtoBuf example - Java)
+ * @since 01/04/16
+ */
 class ListPeople {
   // Iterates though all people in the AddressBook and prints info about them.
-  static void Print(AddressBook addressBook) {
+  static void print(AddressBook addressBook) {
+
     for (Person person: addressBook.getPersonList()) {
       System.out.println("Person ID: " + person.getId());
       System.out.println("  Name: " + person.getName());
@@ -45,6 +49,6 @@ class ListPeople {
     AddressBook addressBook =
       AddressBook.parseFrom(new FileInputStream(args[0]));
 
-    Print(addressBook);
+    print(addressBook);
   }
 }
