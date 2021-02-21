@@ -32,3 +32,18 @@ message AddressBook {
 message Notification {
   required string name = 1;
 }
+
+message User {
+  required string name = 1;
+}
+
+message UserIdentity {
+  require string id = 1;
+}
+
+message UserOrIdentity {
+  oneof identity {
+     User user = 1;
+     UserIdentity userIdentity = 2;
+  }
+}
